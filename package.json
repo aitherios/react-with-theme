@@ -2,7 +2,7 @@
   "name": "react-with-theme",
   "version": "1.0.0",
   "main": "./dist/bundle.js",
-  "description": "React theme high order component helper",
+  "description": "React component theme high order component helper",
   "main": "index.js",
   "scripts": {
     "test": "jest",
