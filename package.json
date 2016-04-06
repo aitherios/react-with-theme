@@ -1,0 +1,26 @@
+{
+  "name": "react-with-theme",
+  "version": "1.0.0",
+  "description": "React theme high order component helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/team-magneto/react-with-theme.git"
+  },
+  "keywords": [
+    "react",
+    "with-theme",
+    "inline-style",
+    "isomorphic",
+    "high-order-component"
+  ],
+  "author": "Team Magneto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-magneto/react-with-theme/issues"
+  },
+  "homepage": "https://github.com/team-magneto/react-with-theme#readme"
+}
