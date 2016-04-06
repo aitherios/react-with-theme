@@ -1,4 +1,4 @@
-jest.autoMockOff()
+jest.unmock('../with-theme')
 
 import React from 'react'
 import WithTheme from '../with-theme'
