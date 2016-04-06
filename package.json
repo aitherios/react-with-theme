@@ -1,9 +1,8 @@
 {
   "name": "react-with-theme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/bundle.js",
   "description": "React component theme high order component helper",
-  "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.js",
