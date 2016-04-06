@@ -1,6 +1,6 @@
 {
   "name": "react-with-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/bundle.js",
   "description": "React component theme high order component helper",
   "main": "index.js",
@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/team-magneto/react-with-theme#readme",
   "dependencies": {
-    "recompose": "^0.15.1",
-    "webpack": "^1.12.14"
+    "recompose": "^0.15.1"
   },
   "peerDependencies": {
     "react": "^0.14.0"
@@ -45,7 +44,8 @@
     "jest-cli": "^0.10.0",
     "react": "^0.14.8",
     "react-addons-test-utils": "^0.14.8",
-    "react-dom": "^0.14.8"
+    "react-dom": "^0.14.8",
+    "webpack": "^1.12.14"
   },
   "jest": {
     "unmockedModulePathPatterns": [
