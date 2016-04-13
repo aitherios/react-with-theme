@@ -15,6 +15,10 @@ const themes = {
   klexos: {
     primaryColor: 'blue',
     secondaryColor: 'green'
+  },
+  default: {
+    primaryColor: 'transparent',
+    secondaryColor: 'transparent'
   }
 }
 ```
@@ -37,3 +41,5 @@ const Decorated = WithTheme(themes)(Header, themeStyle)
 
 Now when you use `<Decorated theme={'lutalica'} />`
 it will render `<h1 style="color:'white'">Header</h1>`
+
+You can declare a default theme as fallback in case you don't inform a theme or misspell.
