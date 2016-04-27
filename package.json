@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/team-magneto/react-with-theme#readme",
   "dependencies": {
-    "recompose": "^0.15.1"
+    "recompose": "^0.17"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "~15"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -41,9 +41,9 @@
     "babel-preset-stage-0": "^6.5.0",
     "enzyme": "^2.2.0",
     "jest-cli": "^0.10.0",
-    "react": "^0.14.8",
-    "react-addons-test-utils": "^0.14.8",
-    "react-dom": "^0.14.8",
+    "react": "^15.0.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-dom": "^15.0.0",
     "webpack": "^1.12.14"
   },
   "jest": {
