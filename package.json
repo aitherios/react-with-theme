@@ -8,7 +8,7 @@
     "clean": "rm -rf dist",
     "transpile": "babel src -D -d dist --ignore '__tests__'",
     "bundle": "webpack --config webpack.config.js",
-    "build": "npm run clean && npm run transpile && npm run bundle",
+    "build": "npm run lint && npm run clean && npm run transpile && npm run bundle",
     "lint": "eslint ./src"
   },
   "repository": {
