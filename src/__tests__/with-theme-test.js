@@ -6,6 +6,8 @@ import { render } from 'enzyme'
 
 describe('WithTheme()', () => {
   const Header = ({ style }) => (<h1 style={style}>Header</h1>)
+  Header.propTypes = { style: React.PropTypes.object }
+
   const themes = {
     default: {
       primaryColor: 'transparent',
@@ -25,7 +27,10 @@ describe('WithTheme()', () => {
     let lutalica
     let klexos
 
-    const Decorated = WithTheme(themes)(Header, (theme) => ({ style: { color: theme.primaryColor} }) )
+    const Decorated = WithTheme(themes)(
+      Header,
+      (theme) => ({ style: { color: theme.primaryColor } })
+    )
 
     beforeEach(() => {
       lutalica = render(<Decorated theme={'lutalica'} />)
@@ -42,7 +47,10 @@ describe('WithTheme()', () => {
     let noTheme
     let wrongTheme
 
-    const Decorated = WithTheme(themes)(Header, (theme) => ({ style: { color: theme.primaryColor} }) )
+    const Decorated = WithTheme(themes)(
+      Header,
+      (theme) => ({ style: { color: theme.primaryColor } })
+    )
 
     beforeEach(() => {
       noTheme = render(<Decorated />)
