@@ -1,6 +1,6 @@
 {
   "name": "react-with-theme",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "./dist/index.js",
   "description": "React component theme high order component helper",
   "scripts": {
@@ -29,10 +29,7 @@
   },
   "homepage": "https://github.com/team-magneto/react-with-theme#readme",
   "dependencies": {
-    "recompose": "^0.17"
-  },
-  "peerDependencies": {
-    "react": "~15"
+    "recompose": "^0.17.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
