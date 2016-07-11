@@ -61,5 +61,37 @@
       "enzyme"
     ],
     "rootDir": "./src"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true,
+      "jest": true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "semi": 0,
+      "new-cap": 0,
+      "no-underscore-dangle": 0,
+      "no-console": [
+        2,
+        {
+          "allow": [
+            "warn",
+            "error",
+            "info"
+          ]
+        }
+      ]
+    }
   }
 }
