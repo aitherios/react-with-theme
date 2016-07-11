@@ -11,16 +11,16 @@ describe('WithTheme()', () => {
   const themes = {
     default: {
       primaryColor: 'transparent',
-      secondaryColor: 'transparent'
+      secondaryColor: 'transparent',
     },
     lutalica: {
       primaryColor: '#fff',
-      secondaryColor: '#000'
+      secondaryColor: '#000',
     },
     klexos: {
       primaryColor: '#aaa',
-      secondaryColor: '#bbb'
-    }
+      secondaryColor: '#bbb',
+    },
   }
 
   describe('when composing with a theme', () => {
