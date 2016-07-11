@@ -1,6 +1,6 @@
 {
   "name": "react-with-theme",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "./dist/index.js",
   "description": "React component theme high order component helper",
   "scripts": {
