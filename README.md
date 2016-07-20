@@ -1,7 +1,7 @@
 # react-with-theme
 [![npm version](https://img.shields.io/npm/v/react-with-theme.svg?style=flat-square)](https://www.npmjs.com/package/react-with-theme)
-[![dependency status](https://img.shields.io/david/team-magneto/react-with-theme.svg?style=flat-square)](https://david-dm.org/team-magneto/react-with-theme)
-[![build status](https://img.shields.io/travis/team-magneto/react-with-theme.svg?style=flat-square)](https://travis-ci.org/team-magneto/react-with-theme)
+[![dependency status](https://img.shields.io/david/team-767/react-with-theme.svg?style=flat-square)](https://david-dm.org/team-767/react-with-theme)
+[![build status](https://img.shields.io/travis/team-767/react-with-theme.svg?style=flat-square)](https://travis-ci.org/team-767/react-with-theme)
 
 React component theme high order component helper
 
