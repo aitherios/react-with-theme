@@ -39,7 +39,7 @@ import WithTheme from 'react-with-theme'
 
 const themeStyle = (theme) => ({ style: { color: theme.primaryColor} })
 
-const Decorated = WithTheme(themes)(Header, themeStyle)
+const Decorated = WithTheme({ themes, transform: themeStyle })(Header)
 ```
 
 Now when you use `<Decorated theme={'lutalica'} />`
