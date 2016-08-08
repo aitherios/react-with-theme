@@ -27,9 +27,11 @@ describe('WithTheme()', () => {
     let lutalica
     let klexos
 
-    const Decorated = WithTheme(themes)(
-      Header,
-      (theme) => ({ style: { color: theme.primaryColor } })
+    const Decorated = WithTheme({
+      themes,
+      transform: (theme) => ({ style: { color: theme.primaryColor } }),
+    })(
+      Header
     )
 
     beforeEach(() => {
@@ -47,9 +49,11 @@ describe('WithTheme()', () => {
     let noTheme
     let wrongTheme
 
-    const Decorated = WithTheme(themes)(
-      Header,
-      (theme) => ({ style: { color: theme.primaryColor } })
+    const Decorated = WithTheme({
+      themes,
+      transform: (theme) => ({ style: { color: theme.primaryColor } }),
+    })(
+      Header
     )
 
     beforeEach(() => {
