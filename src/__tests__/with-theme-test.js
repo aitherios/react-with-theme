@@ -5,65 +5,73 @@ import WithTheme from '../with-theme'
 import { render } from 'enzyme'
 
 describe('WithTheme()', () => {
-  const Header = ({ style }) => (<h1 style={style}>Header</h1>)
-  Header.propTypes = { style: React.PropTypes.object }
+  let subject
+  let Header
+  let Decorated
+  let themes
 
-  const themes = {
-    default: {
-      primaryColor: 'transparent',
-      secondaryColor: 'transparent',
-    },
-    lutalica: {
-      primaryColor: '#fff',
-      secondaryColor: '#000',
-    },
-    klexos: {
-      primaryColor: '#aaa',
-      secondaryColor: '#bbb',
-    },
-  }
+  beforeEach(() => {
+    Header = ({ style }) => (<h1 style={style}>Header</h1>) // eslint-disable-line
+
+    themes = {
+      default: {
+        primaryColor: 'transparent',
+        secondaryColor: 'transparent',
+      },
+      lutalica: {
+        primaryColor: '#fff',
+        secondaryColor: '#000',
+      },
+      klexos: {
+        primaryColor: '#aaa',
+        secondaryColor: '#bbb',
+      },
+    }
+  })
+
+  describe('when composing with nothing', () => {
+    beforeEach(() => {
+      Decorated = WithTheme()(Header)
+    })
+
+    it('renders', () => {
+      subject = render(<Decorated />)
+      expect(subject.html()).toBeTruthy()
+    })
+  })
 
   describe('when composing with a theme', () => {
-    let lutalica
-    let klexos
-
-    const Decorated = WithTheme({
-      themes,
-      transform: (theme) => ({ style: { color: theme.primaryColor } }),
-    })(
-      Header
-    )
-
     beforeEach(() => {
-      lutalica = render(<Decorated theme={'lutalica'} />)
-      klexos = render(<Decorated theme={'klexos'} />)
+      Decorated = WithTheme({
+        themes,
+        transform: (theme) => ({ style: { color: theme.primaryColor } }),
+      })(Header)
     })
 
     it('matches new style', () => {
-      expect(lutalica.html()).toContain('color:#fff')
-      expect(klexos.html()).toContain('color:#aaa')
+      subject = render(<Decorated themeName={'lutalica'} />)
+      expect(subject.html()).toContain('color:#fff')
+      subject = render(<Decorated themeName={'klexos'} />)
+      expect(subject.html()).toContain('color:#aaa')
     })
   })
 
   describe('when composing without an informed theme', () => {
-    let noTheme
-    let wrongTheme
-
-    const Decorated = WithTheme({
-      themes,
-      transform: (theme) => ({ style: { color: theme.primaryColor } }),
-    })(
-      Header
-    )
-
     beforeEach(() => {
-      noTheme = render(<Decorated />)
-      wrongTheme = render(<Decorated theme={'wrong'} />)
+      Decorated = WithTheme({
+        themes,
+        transform: (theme) => ({ style: { color: theme.primaryColor } }),
+      })(Header)
     })
 
-    it('matches new style', () => {
-      expect(noTheme.html()).toContain('color:transparent')
-      expect(wrongTheme.html()).toContain('color:transparent')
+    it('matches default theme without theme name', () => {
+      subject = render(<Decorated />)
+      expect(subject.html()).toContain('color:transparent')
+    })
+
+    it('matches default theme with wrong theme name', () => {
+      subject = render(<Decorated themeName={'wrong'} />)
+      expect(subject.html()).toContain('color:transparent')
     })
   })
 })

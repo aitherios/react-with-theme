@@ -1,16 +1,18 @@
 import React from 'react'
 
 const defaults = {
+  themeNameProperty: 'themeName',
+  themeName: 'default',
   themes: {},
   transform: (theme) => ({ theme }),
 }
 
 const withTheme = ({
-  themes = defaults.theme,
+  themes = defaults.themes,
   transform = defaults.transform,
-}) => (BaseComponent) =>
-  ({ theme, ...props }) => ( // eslint-disable-line
-    <BaseComponent {...{ ...props, ...transform(themes[theme] || themes.default) }} />
+} = {}) => (BaseComponent) =>
+  ({ themeName = defaults.themeName, ...props }) => ( // eslint-disable-line
+    <BaseComponent {...{ ...props, ...transform(themes[themeName] || themes.default) }} />
   )
 
 export default withTheme
