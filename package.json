@@ -11,8 +11,7 @@
     "build": "npm run lint && npm run clean && npm run transpile && npm run bundle",
     "lint": "eslint ./src",
     "preversion": "npm test && npm run build",
-    "version": "git add package.json && git commit -m \"Bump version $npm_package_version\" && git tag -a $npm_package_version -m \"Version $npm_package_version\"",
-    "postversion": "git push && git push --tags"
+    "version": "git add package.json && git commit -m \"Bump version $npm_package_version\" && git tag -a $npm_package_version -m \"Version $npm_package_version\""
   },
   "repository": {
     "type": "git",
