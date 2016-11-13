@@ -25,7 +25,7 @@
     "isomorphic",
     "high-order-component"
   ],
-  "author": "Team Magneto",
+  "author": "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/team-767/react-with-theme/issues"
@@ -94,5 +94,12 @@
         }
       ]
     }
-  }
+  },
+  "maintainers": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)"
+  ],
+  "contributors": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
+    "Guilherme Garnier <guilherme.garnier@gmail.com> (http://blog.guilhermegarnier.com)"
+  ]
 }
